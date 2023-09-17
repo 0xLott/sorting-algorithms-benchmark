@@ -1,5 +1,5 @@
 import java.util.Random;
-
+import java.util.Arrays;
 
 public class arrayGenerator {
     /**
@@ -18,4 +18,18 @@ public class arrayGenerator {
 
         return array;
     }
+
+    public static Integer[] generateSortedArray(int size) {
+        Integer[] array = new Integer[size];
+        Random r = new Random();
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = r.nextInt(101);
+        }
+
+        Arrays.sort(array);
+
+        return array;
+    }
+
 }
