@@ -69,7 +69,7 @@ public class Main {
     static void bubblesort(int arraySize) {
         long totalTime = 0;
 
-        for (int i = 1; i < 51; i++) {
+        for (int i = 1; i < 50; i++) {
             long startTime = System.nanoTime();
 
             Integer[] array = arrayGenerator.generateArray(arraySize);
@@ -96,7 +96,7 @@ public class Main {
     static void mergesort(int arraySize) {
         long totalTime = 0;
 
-        for (int i = 1; i < 51; i++) {
+        for (int i = 1; i < 50; i++) {
             long startTime = System.nanoTime();
 
             Integer[] array = arrayGenerator.generateArray(arraySize);
@@ -107,6 +107,7 @@ public class Main {
 
             long elapsedTime = System.nanoTime() - startTime;
             System.out.println("Array " + i + " - Tempo de execução: " + elapsedTime);
+            totalTime += elapsedTime;
         }
 
         long averageTime = totalTime/50;
