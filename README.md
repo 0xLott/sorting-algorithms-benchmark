@@ -3,18 +3,18 @@ Experiment and analysis of sorting algorithms performance in Java.
 
 ## 1. **Especificações do sistema**
   ### 1.1. **Hardware**
-  Processador		Intel(R) Core(TM) i3-9100F CPU @ 3.60GHz   3.60 GHz
-  
-  Memória RAM		8,00 GB
-  
-  Sistema		Windows 64-bit, x64-based processor
+    Processador		Intel(R) Core(TM) i3-9100F CPU @ 3.60GHz   3.60 GHz
+    
+    Memória RAM		8,00 GB
+    
+    Sistema			Windows 64-bit, x64-based processor
       
   ### 1.2 **Ambiente**
-  Java 20
-  
-  Intellij IDEA 2023.2.1
-  
-  JDK 20
+    Java 20
+    
+    Intellij IDEA 2023.2.1
+    
+    JDK 20
 
 ## 2. **Relatório de execução**
 
@@ -92,20 +92,18 @@ Para cada tamanho de vetor, foram realizadas 50 diferentes execuções, calculan
   |375000|6943699|0,0019|0,099|
   
   Visualizando as funções 	f(x)= x\*log<sub>2</sub>(x)	e	f(x) = x² 	no gráfico, é possível perceber como a curva de crescimento de algoritmos de complexidade O(n\*log(n)) — como o Mergesort — é evidentemente menos acentuada em relação à de algoritmos O(n²), como o Bubblesort.
-  
-  ![A graph of a function](img/function-graph.png)
-  
-  *Gráfico de funções sobre o plano cartesiano*
-  
+
+  <img src="img/graph.png" alt="Gráfico de funções sobre o plano cartesiano" width="480"/>
+ 
   A partir dos resultados de experimentação e análises realizadas, pode-se comprovar, pois, que, no contexto de caso médio de execução, o Mergesort é mais eficiente que o Bubblesort para ordernar vetores. 
 
 ## 2.3. **Quicksort**
-### Tempo médio de execução
-
-|**Vetor não ordenado**|**Vetor previamente ordenado**|
-| :-: | :-: |
-|5386840|7049570|
-
-Os resultados observados durante a experimentação confirmam o comportamento teórico esperado do Quicksort, cuja eficiência pode ser afetada negativamente quando se o aplica a vetores já ordenados. Segundo Cormen et al. (2012), isso se dá em função do desbalanceamento do processo de partição do vetor, e tal contexto de execução pode levar a complexidades O(n²)
-
-> *“Moreover, the O(n²) running time occurs when the input array is already completely sorted — a common situation in which insertion sort runs in O(n²) time*” (Cormen et al., 2012)
+  ### Tempo médio de execução
+  
+  |**Vetor não ordenado**|**Vetor previamente ordenado**|
+  | :-: | :-: |
+  |5386840|7049570|
+  
+  Os resultados observados durante a experimentação confirmam o comportamento teórico esperado do Quicksort, cuja eficiência pode ser afetada negativamente quando se o aplica a vetores já ordenados. Segundo Cormen et al. (2012), isso se dá em função do desbalanceamento do processo de partição do vetor, e tal contexto de execução pode levar a complexidades O(n²)
+  
+  > *“Moreover, the O(n²) running time occurs when the input array is already completely sorted — a common situation in which insertion sort runs in O(n²) time*” (Cormen et al., 2012)
